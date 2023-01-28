@@ -1,0 +1,16 @@
+type NewWallet @entity {
+  id: ID!
+  count: BigInt!
+  wallet: Bytes # address
+}
+
+type Transfer @entity {
+  id: ID!
+  recipient: Bytes!
+  tokenAmt: BigInt!
+  wallet: String!
+  transactionHash: String!
+  fee: BigInt!
+  timestamp: BigInt!
+  erc20: Bytes
+}
